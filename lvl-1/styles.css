@@ -20,7 +20,7 @@
 }
 
 body {
-    height: 230vh;
+    height: 300vh;
     background-image: linear-gradient(to top, #343a40, #8d99ae);
 }
 
@@ -215,6 +215,7 @@ body {
     margin: auto;
 }
 
+
 /* hide images by default */
 .slides {
     display: none;
@@ -285,16 +286,30 @@ body {
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    background-color: #dee2e6;
+    ;
+}
+
+.watch-btn:hover {
+    background-color: #e9ecef;
 }
 
 .slide-btn .add-btn {
-    width: 10%;
-    height: 32px;
+    width: 8%;
+    height: 30px;
     /* font-size: 1rem; */
     font-weight: bold;
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    background-color: #8d99ae;
+    opacity: 50%;
+    color: white;
+    font-weight: bold;
+}
+
+.add-btn:hover {
+    background-color: #ced4da;
 }
 
 .show-one .title {
