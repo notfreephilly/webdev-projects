@@ -174,9 +174,6 @@ body {
     width: 400%;
 }
 
-/* FIX ISSUE - PROFILE CONTAINER GOING OFF SCREEN
-- MAKE PROFILE IMAGE A CIRCLE
-*/
 
 .profile-content .btn {
     border: none;
@@ -212,7 +209,8 @@ body {
 .slideshow-container {
     max-width: 100%;
     position: relative;
-    margin: auto;
+    /* margin: auto; */
+    margin-bottom: 17%;
 }
 
 
@@ -222,10 +220,11 @@ body {
 }
 
 .slides img {
-    height: 95vh;
+    height: 115vh;
     object-fit: cover;
     object-position: 15% 30%;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 1);
+    /* width: 100%; */
 }
 
 /* next and previous buttons */
@@ -265,7 +264,7 @@ body {
     color: white;
     padding: 8px 12px;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 2%;
     text-align: left;
 }
@@ -313,14 +312,14 @@ body {
 }
 
 .show-one .title {
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: "Press Start 2P", system-ui;
 }
 
 .show-one .title .title-span {
     font-family: "Press Start 2P", system-ui;
     color: #ef233c;
-    font-size: 5rem;
+    font-size: 6rem;
 }
 
 .show-one h3,
@@ -351,10 +350,13 @@ body {
 
 /* bullet indicators */
 .dot {
+    position: absolute;
+    top: 98%;
+    z-index: 5;
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 20px;
+    height: 10px;
+    width: 10px;
+    /* margin: 0 20px; */
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
@@ -367,8 +369,19 @@ body {
 }
 
 /* SHOW LIST CONTAINERS */
+
+
 .show-list-container {
     padding-left: 2%;
+    /* position: absolute;
+    top: 105%; */
+    width: 100%;
+}
+
+.trending {
+    position: absolute;
+    top: 105%;
+    width: inherit;
 }
 
 .show-list-container h2 {
@@ -392,7 +405,7 @@ body {
 }
 
 .shows-grid {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: row;
     gap: 25px;
@@ -416,6 +429,7 @@ body {
 }
 
 .scroll-container {
+    max-width: inherit;
     overflow: scroll;
     white-space: nowrap;
     padding: 10px;
