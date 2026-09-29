@@ -21,16 +21,13 @@
 
 body {
     height: 300vh;
-    background-image: linear-gradient(to top, #343a40, #8d99ae);
+    background: #000000;
+    /* background: linear-gradient(to top, #343a40, #000000); */
 }
 
 /* NAVBAR */
 
 .nav-container {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; */
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
     padding: 12px;
@@ -39,7 +36,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
 }
 
 .nav-container h1 a {
@@ -209,8 +206,6 @@ body {
 .slideshow-container {
     max-width: 100%;
     position: relative;
-    /* margin: auto; */
-    margin-bottom: 17%;
 }
 
 
@@ -219,13 +214,32 @@ body {
     display: none;
 }
 
-.slides img {
+.image-container {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+    z-index: 1;
+}
+
+
+.image-container img {
     height: 115vh;
     object-fit: cover;
     object-position: 15% 30%;
-    box-shadow: 8px 8px 8px rgba(0, 0, 0, 1);
-    /* width: 100%; */
+    max-width: inherit;
 }
+
+
 
 /* next and previous buttons */
 .prev,
@@ -241,6 +255,7 @@ body {
     font-size: 32px;
     transition: 0.2s ease;
     border-radius: 0 3px 3px 0;
+    z-index: 5;
 }
 
 /* position the next button to the right */
@@ -267,6 +282,7 @@ body {
     top: 50%;
     left: 2%;
     text-align: left;
+    z-index: 10;
 }
 
 .show-info h1,
@@ -372,15 +388,14 @@ body {
 
 
 .show-list-container {
-    padding-left: 2%;
-    /* position: absolute;
-    top: 105%; */
+    margin-top: -40px;
     width: 100%;
+    padding: 24px;
 }
 
+
+
 .trending {
-    position: absolute;
-    top: 105%;
     width: inherit;
 }
 
@@ -439,12 +454,15 @@ body {
 
 /* FOOTER CONTAINER */
 .footer-container {
+    /* position: absolute;
+    top: 100%; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 24px;
     color: #ced4da;
     font-weight: bold;
+    z-index: 30;
 }
 
 .footer-left .icon-links {
