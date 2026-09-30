@@ -250,7 +250,7 @@ body {
 
 
 .image-container img {
-    height: 115vh;
+    height: 90vh;
     object-fit: cover;
     object-position: 15% 30%;
     max-width: inherit;
@@ -382,7 +382,7 @@ body {
 }
 
 /* bullet indicators */
-.dot {
+/* .dot {
     position: absolute;
     top: 98%;
     z-index: 20;
@@ -398,7 +398,7 @@ body {
 .active,
 .dot:hover {
     background-color: #717171;
-}
+} */
 
 /* SHOW LIST CONTAINERS */
 
